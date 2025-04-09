@@ -26,7 +26,7 @@ header h1 {
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards */
     gap: 25px;
     padding: 40px;
     max-width: 1200px;
@@ -43,7 +43,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 350px; /* Fixed height for consistency */
+    height: 400px; /* Increased height for high score */
 }
 
 .game-card:hover {
@@ -68,8 +68,19 @@ header h1 {
 .game-card p {
     font-size: 0.9rem;
     color: #b0b0c0;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.game-card .high-score {
+    font-size: 0.95rem;
+    color: #e0e0e0;
     margin-bottom: 15px;
-    flex-grow: 1; /* Ensures description takes available space */
+}
+
+.game-card .high-score .score {
+    color: #e94560;
+    font-weight: bold;
 }
 
 .game-card .play-link {
@@ -98,7 +109,7 @@ header h1 {
     }
 
     .game-card {
-        height: auto; /* Allow height to adjust on small screens */
+        height: auto;
     }
 
     .game-card h2 {
